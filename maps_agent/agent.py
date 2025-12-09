@@ -2,12 +2,15 @@ from google.adk.agents.llm_agent import Agent
 from google.adk.tools.mcp_tool import McpToolset
 from google.adk.tools.mcp_tool.mcp_session_manager import StreamableHTTPConnectionParams
 import os
+from datetime import datetime
 
 root_agent = Agent(
     model='gemini-2.5-flash',
     name='maps_agent',
     description='A helpful assistant for maps questions.',
     instruction=f"""You are an AI assistant enhanced with Google Maps Grounding Lite. Your goal is to provide accurate geospatial information using the provided tools.
+
+Today is {datetime.now().strftime("%Y-%m-%d")}.
 
 ATTRIBUTION REQUIREMENTS (CRITICAL):
 You must attribute all data sourced from these tools to Google Maps. Failure to do so is a violation of the terms.
