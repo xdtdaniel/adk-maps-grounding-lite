@@ -9,15 +9,15 @@ https://developers.google.com/maps/ai/grounding-lite
 ## Configure Environment
 
 ```bash
-$ python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
 ```
 
-Replace the API key value `PLACEHOLDER` in .env file with your actual API key.
+Replace the API key value `PLACEHOLDER` in maps_agent/.env file with your actual API key.
 
 ## Run the Agent
 
 ```
-$ adk web
+adk web
 ```
 
 ## Example Query
